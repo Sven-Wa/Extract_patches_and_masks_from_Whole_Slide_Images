@@ -31,7 +31,7 @@ Workflow:
               
               
               
-```
+```python
 
   from prepare_data import PrepareData
   import matplotlib.pyplot as plt 
