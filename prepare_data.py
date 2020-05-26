@@ -60,6 +60,7 @@ class PrepareData:
 
         return all_images, all_masks
 
+# TODO: Finish implementing this function, which should take a single WSI and xml file as input
     def creat_images_and_masks(self):
         x, y = calc_number_of_iterations_for_sliding_window(self.patch_min_width, self.patch_min_height, WSI_path,
                                                             ROI_annoations_path)
@@ -82,8 +83,7 @@ class PrepareData:
         all_masks.append(masks)
 
 
-
-
+#TODO: This funtion should also work when only the target path is specifiyed and the other class arguments are empthy
 
     def cut_images(self, desired_width=None, desired_height=None):
         # If images and masks are already in a separate folder dont forget to apply this function in both folders !!!
@@ -117,3 +117,5 @@ class PrepareData:
             img = Image.fromarray(img)
             new_file_path = os.path.join(self.target_path, file_name)
             img.save(new_file_path)
+
+

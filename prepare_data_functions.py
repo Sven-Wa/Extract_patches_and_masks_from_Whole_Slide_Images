@@ -295,27 +295,22 @@ def create_masks(patch_min_width, patch_min_height, WSI_path, xml_file_path, sav
                 mask = Image.fromarray(mask)
                 new_file_path = os.path.join(target_path + "/gt/", mask_name + ".png")
                 mask.save(new_file_path)
-################################################
+
             #TODO: if option is set to save==False and separate_objet == True
             #      the mask of each separated object should be saved in a dictionary
             if save == True and separate_objects == True:
-                print("********************************************")
+
                 new_folder_path = target_path + '/' + patient_ID + "_image_" + str(number)
                 if not os.path.exists(new_folder_path):
                     os.mkidr(new_folder_path)
-                print("mask shape: ", mask.shape)
+
                 os.mkdir(new_folder_path + '/mask')
                 object = '_object_'
                 gray_mask = rgb2gray(np.array(mask))
-                print(gray_mask.shape)
-                plt.imshow(gray_mask)
-                plt.show()
+
                 ret, bw_mask = cv2.threshold(gray_mask, 0, 255, cv2.THRESH_BINARY)
                 labels, num = label(bw_mask, return_num=True)
-                print(num)
-                print(labels.shape)
-                plt.imshow(labels)
-                plt.show()
+
 
                 for L in range(1, num + 1):
                     plt.imsave(new_folder_path + '/mask/' + mask_name + object + str(L) + '.png', np.uint8(labels == L))
