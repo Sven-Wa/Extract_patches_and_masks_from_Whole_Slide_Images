@@ -23,6 +23,8 @@ The annotation coordinates have to be provided in XML file format.
               
 4. Draw Annotations inside this Rectangle using the Polygon tool
 
+![](images/annoation_of_ROI_in_ASAP.png)
+
 
 5. Export the Annotations as xml file.
    IMPORTANT: The xml file should have the following name:
