@@ -37,18 +37,26 @@ This code creates masks from polygon annotations on a Whole Slide Images and ext
 
 
 #### 5 Create masks and extract corresponding image patches
-The size of the extracted image patches will be adapted to the rectangle size so that all patches thogether are matching the entire ROI. Therefore you have to specifiy a minimum image width and height. 5.1 shows you how you can cut the image to a desired size.
+The size of the extracted image patches will be adapted to the rectangle size so that all patches together are matching the entire ROI. Therefore you have to specify a minimum image width and height. 5.1 shows you how you can cut the image to a desired size.
 ```python
 
 from prepare_data import PrepareData
 import matplotlib.pyplot as plt 
+
 path_to_WSI_folder = "/path/to/folder/containing/WSI-files"
 path_to_xml_folder = "/path/to/folder/containing/xml-files"
-target_path = "/path/where/images/and/masks/should/be/saved"
-image_minimum_width = 300
-image_minimum_height = 300
+target_path= "/path/where/images/and/masks/should/be/saved"
+image_minimum_width = 400
+image_minimum_height = 400
 
-data = PrepareData(path_to_WSI_folder, path_to_xml_folder,  image_minimum_width, image_minimum_height,  save=True, separate_objects=False target_path=target_path)
+
+data = PrepareData(path_to_WSI_folder, 
+                   path_to_xml_folder, 
+                   image_minimum_width, 
+                   image_minimum_height, 
+                   save=True, 
+                   target_path=target_path)
+
 
 PrepareData.create_images_and_masks_for_all_files(data)
   
@@ -58,31 +66,59 @@ PrepareData.create_images_and_masks_for_all_files(data)
 ```python
 from prepare_data import PrepareData
 import matplotlib.pyplot as plt 
+
 path_to_WSI_folder = "/path/to/folder/containing/WSI-files"
 path_to_xml_folder = "/path/to/folder/containing/xml-files"
-target_path = "/path/where/images/and/masks/should/be/saved"
-image_minimum_width = 300
-image_minimum_height = 300
+
+image_minimum_width = 400
+image_minimum_height = 400
 desired_width = 300
 desired_height = 300
 
-data = PrepareData(path_to_WSI_folder, path_to_xml_folder,  image_minimum_width, image_minimum_height,  save=True, separate_objects=False target_path=target_path)
-PrepareData.create_images_and_masks_for_all_files(data)
+target_path="/path/to/the/images/you/want/to/cut"
+
+data = PrepareData(path_to_WSI_folder, 
+                   path_to_xml_folder, 
+                   image_minimum_width, 
+                   image_minimum_height, 
+                   save=True, 
+                   target_path=target_path)
+
 data.cut_images(desired_width, desired_height)
+
+
+#cut the masks (change path to the mask folder)
+target_path="/path/to/the/masks/you/want/to/cut"
+
+data = PrepareData(path_to_WSI_folder, 
+                   path_to_xml_folder, 
+                   image_minimum_width, 
+                   image_minimum_height, 
+                   save=True, 
+                   target_path=target_path)
+
+data.cut_images(desired_width, desired_height)
+
 ```
 
 
-##### 5.2 In case you want to save each annotated object in a separate mask set the option separate_objects=True
+##### 5.2 In case you want to save each annotated object in as a separate mask set the option separate_objects=True
 ```python
-from prepare_data import PrepareData
-import matplotlib.pyplot as plt 
 path_to_WSI_folder = "/path/to/folder/containing/WSI-files"
 path_to_xml_folder = "/path/to/folder/containing/xml-files"
-target_path = "/path/where/images/and/masks/should/be/saved"
-image_minimum_width = 300
-image_minimum_height = 300
+target_path= "/path/where/images/and/masks/should/be/saved"
 
-data = PrepareData(path_to_WSI_folder, path_to_xml_folder,  image_minimum_width, image_minimum_height,  save=True, separate_objects=True target_path=target_path)
+image_minimum_width = 400
+image_minimum_height = 400
+
+data = PrepareData(path_to_WSI_folder, 
+                   path_to_xml_folder,  
+                   image_minimum_width, 
+                   image_minimum_height,  
+                   save=True, 
+                   separate_objects=True, 
+                   target_path=target_path)
+
 PrepareData.create_images_and_masks_for_all_files(data)
 ```
 
