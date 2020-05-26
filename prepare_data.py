@@ -23,7 +23,7 @@ class PrepareData:
         self.target_path = target_path
 
 
-    def create_images_and_masks(self):
+    def create_images_and_masks_for_all_files(self):
         # creates images and mask for all WSI and annotation inside a folder
         # TODO maybe implement somthing that you can run that for a specific WSI and annotation file (in case the folder is full of other WSI and annotation files)
         all_images = []
@@ -60,6 +60,30 @@ class PrepareData:
 
         return all_images, all_masks
 
+    def creat_images_and_masks(self):
+        x, y = calc_number_of_iterations_for_sliding_window(self.patch_min_width, self.patch_min_height, WSI_path,
+                                                            ROI_annoations_path)
+        print("number of iterations:", x, y)
+        adapted_patch_width, adapted_patch_height = adapt_sliding_window_size_for_ROI(self.patch_min_width,
+                                                                                      self.patch_min_height, WSI_path,
+                                                                                      ROI_annoations_path)
+        print(adapted_patch_height)
+        print(adapted_patch_width)
+
+        # images: Dictionary of image names and images, for one ROI
+        images = create_training_images(adapted_patch_width, adapted_patch_height, WSI_path, ROI_annoations_path,
+                                        self.save, self.separate_objects, self.target_path)
+
+        # masks: Dictionary of mask names and masks, for one ROI
+        masks = create_masks(adapted_patch_width, adapted_patch_height, WSI_path, ROI_annoations_path, self.save,
+                             self.separate_objects, self.target_path)
+
+        all_images.append(images)
+        all_masks.append(masks)
+
+
+
+
 
     def cut_images(self, desired_width=None, desired_height=None):
         # If images and masks are already in a separate folder dont forget to apply this function in both folders !!!
@@ -93,44 +117,3 @@ class PrepareData:
             img = Image.fromarray(img)
             new_file_path = os.path.join(self.target_path, file_name)
             img.save(new_file_path)
-
-            # print(np.shape(img))
-            # plt.imshow(img)
-            # plt.show()
-
-#################################################################################33
-# CREATE IMAGES AND MASKS
-
-
-# path_to_WSI_folder = "/home/sven/Desktop/data/Test_WSI"
-# path_to_xml_folder = "/home/sven/Desktop/data/Test_WSI/xml_files"
-
-
-# save=True, target_path="/home/sven/Desktop/data/test"
-#data = PrepareData(path_to_WSI_folder, path_to_xml_folder, 761, 517, save=True, target_path="/home/sven/Desktop/data/test")
-
-# list containen dictionaries
-# each dictionary contains name and images of one ROI
-
-
-# all_images, all_masks = PrepareData.create_images_and_masks(data)
-# for img_of_one_ROI, mask_of_one_ROI in zip(all_images, all_masks):
-#     for i, m in zip(img_of_one_ROI, mask_of_one_ROI):
-#         img = img_of_one_ROI[i]
-#         mask = mask_of_one_ROI[m]
-#         plt.imshow(img)
-#         plt.show()
-#         plt.imshow(mask[:,:,2])
-#         plt.show()
-
-
-#########################33
-
-
-# data = PrepareData(path_to_WSI_folder, path_to_xml_folder, 761, 517, save=True, separate_objects=True, target_path="/home/sven/Desktop/data/test")
-# PrepareData.create_images_and_masks(data)
-
-# data = PrepareData(path_to_WSI_folder, path_to_xml_folder, 761, 517, save=True, separate_objects=False, target_path="/home/sven/Desktop/data/test")
-# PrepareData.create_images_and_masks(data)
-
-

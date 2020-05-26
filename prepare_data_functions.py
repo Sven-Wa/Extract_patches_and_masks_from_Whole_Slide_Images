@@ -37,22 +37,39 @@ def xml_to_coordinates(path):
 
 
 def assign_corresponding_files(path_to_WSI_folder, path_to_xml_folder):
-    WSI_file_names = sorted([f for f in os.listdir(path_to_WSI_folder) if re.match(r'.*mrxs', f)])
+    """"
+    This function assigns xml files to the corresponding WSI files
+    The xml file name has to be: xml-filename = WSI-filename_ROI_something.xml
+    The WSI files have to end with mrxs or svs
+
+    Parameters
+    ----------
+    ....
+    ...
+
+    :returns
+    corresponding_files: Dictionary were path to WSI file represents the key, and a list of all correspoinding xml files represents the value
+    """
+
+    WSI_file_names = sorted([f for f in os.listdir(path_to_WSI_folder) if re.match(r'.*mrxs|.*svs', f)])
     xml_file_names = sorted([f for f in os.listdir(path_to_xml_folder) if re.match(r'.*xml$', f)])
     corresponding_files = {}
     for WSI_file_name in WSI_file_names:
         lst = []
         for xml_file_name in xml_file_names:
+            # the xml file name should be: = WSI_file_name_ROI_3_SOMETHING.xml
             # define pattern to replace --> so that only the beginning of the xml file name remains
-            pattern = re.compile('(_ROI_[0-9]*.xml)')
+            pattern = re.compile('(_ROI_[1-9].*.xml)')
             # replace pattern with '' (nothing) inside the file_name
             substring = pattern.sub('', xml_file_name)
             # Check if WSI and xml belong together (each xml file is derived from a certain WSI)
+
             if substring in WSI_file_name:
                 xml_file_path = os.path.join(path_to_xml_folder, xml_file_name)
                 WSI_path = os.path.join(path_to_WSI_folder, WSI_file_name)
                 lst.append(xml_file_path)
-        corresponding_files[WSI_path] = lst
+
+                corresponding_files[WSI_path] = lst
     return corresponding_files
 
 def ROI_coordinates(xml_file_path):
