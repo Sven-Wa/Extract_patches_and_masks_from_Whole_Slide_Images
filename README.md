@@ -8,31 +8,41 @@ The annotation coordinates have to be provided in XML file format.
 
 ### Workflow:
 
-### 1. Download a sample whole-slide image:
+
+#### 1. Load your Whole Slide Image in ASAP.
+   
+   Download a sample whole-slide image here:
+   
    https://data.kitware.com/api/v1/file/5899dd6d8d777f07219fcb23/download
-
-
-2. Load your Whole Slide Image in ASAP.
+   
    Download ASAP here:
+   
    https://github.com/computationalpathologygroup/ASAP/releases
   
   
-3. Draw a rectangle which will be your Region Of Interest (ROI). 
-   IMPORTANT: Only draw ONE ROI. If you want to annotate several ROI within the same WSI you should save each ROI in a
+#### 2. Draw a rectangle which will be your Region Of Interest (ROI). 
+   
+   IMPORTANT: Only draw a single ROI. If you want to annotate several ROI within the same WSI you should save each ROI in a
               separate xml file.
               
-4. Draw Annotations inside this Rectangle using the Polygon tool
+#### 3. Draw Annotations inside this Rectangle using the Polygon tool
 
-![](images/annoation_of_ROI_in_ASAP.png)
+![](Images/annoation_of_ROI_in_ASAP.png)
 
 
-5. Export the Annotations as xml file.
+#### 4. Export the Annotations as xml file.
+
    IMPORTANT: The xml file should have the following name:
-              xml-filename = WSI-filename_ROI_something.xml (somthing can be replaced with anything you want)
+              xml-filename = WSI-filename_ROI_something.xml 
               
+              Example:
               
-              
-              
+                 WSI-filename: 02.11715_1E_HE.mrxs
+                 
+                 xml-filename: 02.11715_1E_HE_ROI_1.mrxs
+
+
+
 ```python
 
   from prepare_data import PrepareData
