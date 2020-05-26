@@ -9,17 +9,12 @@ This code creates masks from polygon annotations on a Whole Slide Images and ext
 
 
 #### 1. Load your Whole Slide Image in ASAP.
+   Download a sample whole-slide image here: https://data.kitware.com/api/v1/file/5899dd6d8d777f07219fcb23/download
    
-   Download a sample whole-slide image here:
-   
-   https://data.kitware.com/api/v1/file/5899dd6d8d777f07219fcb23/download
-   
-   Download ASAP here:
-   
-   https://github.com/computationalpathologygroup/ASAP/releases
+   Download ASAP here: https://github.com/computationalpathologygroup/ASAP/releases
   
   
-#### 2. Draw a rectangl which will be Region Of Interest.
+#### 2. Draw a rectangle which will be your Region Of Interest.
    
    IMPORTANT: Only draw a single ROI. If you want to annotate several ROI within the same WSI you should save each ROI in a
               separate xml file.
@@ -41,7 +36,7 @@ This code creates masks from polygon annotations on a Whole Slide Images and ext
                  xml-filename: 02.11715_1E_HE_ROI_1.xml
 
 
-#### 5 Created masks and corresponding images patches
+#### 5 Create masks and extract corresponding image patches
 The size of the extracted image patches will be adapted to the rectangle size so that all patches thogether are matching the entire ROI. Therefore you have to specifiy a minimum image width and height. 5.1 shows you how you can cut the image to a desired size.
 ```python
 
@@ -59,7 +54,7 @@ PrepareData.create_images_and_masks_for_all_files(data)
   
   
 ```
-##### 5.1) Cut the saved images to the desired size
+##### 5.1 Cut the saved images and masks to the desired size
 ```python
 from prepare_data import PrepareData
 import matplotlib.pyplot as plt 
