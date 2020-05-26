@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="66c98281-9811-4d8f-80c0-9f41d6178fc8" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="Deep_Learning_for_Whole_Slide_Images" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="$PROJECT_DIR$/.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectId" id="1XvimA9TNjpoL7MopBSx4y24gHN" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Python.prepare_data">
+    <configuration name="RunPrediction" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="Deep_Learning_for_Whole_Slide_Images" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="$USER_HOME$/anaconda3/envs/GlaSEnv/bin/python3.7" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/RunPrediction.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="make_predictions" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="Deep_Learning_for_Whole_Slide_Images" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="$USER_HOME$/anaconda3/envs/GlaSEnv/bin/python3.7" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/make_predictions.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="prepare_data" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="Deep_Learning_for_Whole_Slide_Images" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="$USER_HOME$/anaconda3/envs/GlaSEnv/bin/python3.7" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/prepare_data.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.prepare_data" />
+      <item itemvalue="Python.RunPrediction" />
+      <item itemvalue="Python.make_predictions" />
+    </list>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="66c98281-9811-4d8f-80c0-9f41d6178fc8" name="Default Changelist" comment="" />
+      <created>1581933124358</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1581933124358</updated>
+      <workItem from="1581933125400" duration="10911000" />
+      <workItem from="1582002580767" duration="293000" />
+      <workItem from="1582003214643" duration="15823000" />
+      <workItem from="1582033563914" duration="7886000" />
+      <workItem from="1582049306017" duration="2973000" />
+      <workItem from="1582097805084" duration="693000" />
+      <workItem from="1582202867026" duration="882000" />
+      <workItem from="1582975491573" duration="1811000" />
+      <workItem from="1583137630178" duration="2388000" />
+      <workItem from="1583518051148" duration="636000" />
+      <workItem from="1584632786565" duration="8340000" />
+      <workItem from="1584725175113" duration="4442000" />
+      <workItem from="1584780341382" duration="22602000" />
+      <workItem from="1584861299316" duration="5227000" />
+      <workItem from="1584868180954" duration="2214000" />
+      <workItem from="1584871956223" duration="14000" />
+      <workItem from="1584872216756" duration="13599000" />
+      <workItem from="1584904911356" duration="41000" />
+      <workItem from="1584905708970" duration="3760000" />
+      <workItem from="1584947544033" duration="10542000" />
+      <workItem from="1585039042490" duration="21192000" />
+      <workItem from="1585074569796" duration="2280000" />
+      <workItem from="1585156126927" duration="2992000" />
+      <workItem from="1585159730791" duration="2647000" />
+      <workItem from="1585205467226" duration="11578000" />
+      <workItem from="1585291624402" duration="11673000" />
+      <workItem from="1585378038951" duration="6151000" />
+      <workItem from="1586854538947" duration="648000" />
+      <workItem from="1586928047865" duration="783000" />
+      <workItem from="1587016417265" duration="791000" />
+      <workItem from="1587032085327" duration="592000" />
+      <workItem from="1587102899760" duration="645000" />
+      <workItem from="1589719116396" duration="9244000" />
+      <workItem from="1589731035754" duration="3233000" />
+      <workItem from="1589785485929" duration="14889000" />
+      <workItem from="1589824141365" duration="2105000" />
+      <workItem from="1590050282604" duration="2113000" />
+      <workItem from="1590079949879" duration="12000" />
+      <workItem from="1590130122624" duration="5655000" />
+      <workItem from="1590140831968" duration="1001000" />
+      <workItem from="1590148308421" duration="17138000" />
+      <workItem from="1590317448944" duration="5606000" />
+      <workItem from="1590388634293" duration="13223000" />
+      <workItem from="1590417378777" duration="6000" />
+      <workItem from="1590418203086" duration="4392000" />
+      <workItem from="1590474464844" duration="325000" />
+    </task>
+    <task id="LOCAL-00001" summary="This Repository can be used to extract image patches and corresponding annotation (coordinates of masks boundarys on  WSI saved as xml file)&#10;One option is to save each annotation object as a separat masks">
+      <created>1590435026732</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1590435026732</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="This Repository can be used to extract image patches and corresponding annotation (coordinates of masks boundarys on  WSI saved as xml file)&#10;One option is to save each annotation object as a separat masks" />
+    <option name="LAST_COMMIT_MESSAGE" value="This Repository can be used to extract image patches and corresponding annotation (coordinates of masks boundarys on  WSI saved as xml file)&#10;One option is to save each annotation object as a separat masks" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Deep_Learning_for_Whole_Slide_Images$MakePrediction.coverage" NAME="make_predictions Coverage Results" MODIFIED="1590248773002" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Deep_Learning_for_Whole_Slide_Images$RunPrediction.coverage" NAME="RunPrediction Coverage Results" MODIFIED="1584640105345" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Deep_Learning_for_Whole_Slide_Images$PrepareData.coverage" NAME="PrepareData Coverage Results" MODIFIED="1589826171996" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Deep_Learning_for_Whole_Slide_Images$prepare_data.coverage" NAME="prepare_data Coverage Results" MODIFIED="1590397472608" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
+</project>
