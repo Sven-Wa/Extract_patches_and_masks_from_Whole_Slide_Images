@@ -30,6 +30,7 @@ The annotation coordinates have to be provided in XML file format.
               
               
               
+              
 ```python
 
   from prepare_data import PrepareData
@@ -37,8 +38,6 @@ The annotation coordinates have to be provided in XML file format.
 
    data = PrepareData(path_to_WSI_folder, path_to_xml_folder, image_minimum_width, image_minimum_height, save=False,
    target_path=None)
-   
-
 ```
 
 
