@@ -10,11 +10,13 @@ The annotation coordinates have to be provided in XML file format.
 Workflow:
 
 1. Download a sample whole-slide image:
+
    https://data.kitware.com/api/v1/file/5899dd6d8d777f07219fcb23/download
 
 
 2. Load your Whole Slide Image in ASAP.
    Download ASAP here:
+   
    https://github.com/computationalpathologygroup/ASAP/releases
    
 3. Draw a rectangle which will be your Region Of Interest (ROI). 
@@ -30,22 +32,7 @@ Workflow:
               
   
 
-6. run the following python code:
 
-   from prepare_data import PrepareData
-   import matplotlib.pyplot as plt 
-   data = PrepareData(path_to_WSI_folder, path_to_xml_folder, image_minimum_width, image_minimum_height, save=False, target_path=None)
-   
-   all_images, all_masks = PrepareData.create_images_and_masks(data)
-   for img_of_one_ROI, mask_of_one_ROI in zip(all_images, all_masks):
-       for i, m in zip(img_of_one_ROI, mask_of_one_ROI):
-            img = img_of_one_ROI[i]
-            mask = mask_of_one_ROI[m]
-            plt.imshow(img)
-            plt.show()
-            print(mask.shape)
-            plt.imshow(mask[:,:,1])
-            plt.show()
 
 
 
