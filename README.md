@@ -41,7 +41,8 @@ This code creates masks from polygon annotations on a Whole Slide Images and ext
                  xml-filename: 02.11715_1E_HE_ROI_1.xml
 
 
-#### 5. Created masks and corresponding images patches
+#### 5 Created masks and corresponding images patches
+The size of the extracted image patches will be adapted to the rectangle size so that all patches thogether are matching the entire ROI. Therefore you have to specifiy a minimum image width and height. 5.1 shows you how you can cut the image to a desired size.
 ```python
 
 from prepare_data import PrepareData
@@ -58,8 +59,8 @@ PrepareData.create_images_and_masks_for_all_files(data)
   
   
 ```
-##### 5.1) Cut the saved image to the desired size
-```
+##### 5.1) Cut the saved images to the desired size
+```python
 from prepare_data import PrepareData
 import matplotlib.pyplot as plt 
 path_to_WSI_folder = "/path/to/folder/containing/WSI-files"
@@ -76,8 +77,8 @@ data.cut_images(desired_width, desired_height)
 ```
 
 
-##### 5.2 In case you want to save each annotated object in a separate mask set the option  separate_objects=True
-```
+##### 5.2 In case you want to save each annotated object in a separate mask set the option separate_objects=True
+```python
 from prepare_data import PrepareData
 import matplotlib.pyplot as plt 
 path_to_WSI_folder = "/path/to/folder/containing/WSI-files"
