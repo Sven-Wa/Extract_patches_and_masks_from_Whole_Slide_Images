@@ -30,15 +30,16 @@ Workflow:
               xml-filename = WSI-filename_ROI_something.xml (somthing can be replaced with anything you want)
               
               
-  ```
-function test() {
+              
+```
+
   from prepare_data import PrepareData
   import matplotlib.pyplot as plt 
 
    data = PrepareData(path_to_WSI_folder, path_to_xml_folder, image_minimum_width, image_minimum_height, save=False,
    target_path=None)
    
-}
+
 ```
 
 
