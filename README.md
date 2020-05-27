@@ -1,4 +1,4 @@
-# Extract_patches_and_masks_from_Whole_Slide_Images
+# Extract patches and masks from Whole Slide Images 
 
 This code creates masks from polygon annotations on a Whole Slide Images and extracts corresponding image patches. The annotation coordinates have to be provided in XML file format.
 
